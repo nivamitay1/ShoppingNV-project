@@ -21,11 +21,20 @@ View the Live Demo at https://online-shop-niv.herokuapp.com
 
 ## Screenshots:
 
-![Home Page](/screenshots/1.png "Home Page")
+### User:
 
-![](/screenshots/2.png)
+![Login](/screenshots/Login.png "Login")
+![Sign Up](/screenshots/Sign-up.png "Sign Up")
+![About](/screenshots/About.png "About")
+![Home Page](/screenshots/HomePage-client.png "Home Page")
+![Cart Review](/screenshots/Cart-review.png "Cart Review")
+![Checkout](/screenshots/Checkout.png "Checkout")
+![Order Summary](/screenshots/Order-summary.png "Order Summary")
+![Invoice](/screenshots/Invoice.png "Invoice")
 
-![](/screenshots/3.png)
+### Admin:
+
+![Home Page Admin](/screenshots/HomePage-client.png "Home Page")
 
 ## Built With:
 
