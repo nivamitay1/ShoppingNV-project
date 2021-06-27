@@ -1,0 +1,55 @@
+.orderWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.main {
+  max-height: 90vh;
+}
+.wraper {
+  padding: 7%;
+  max-height: 70%;
+  width: 40vw;
+  overflow: auto;
+}
+.ItemList {
+  height: 50vh;
+  overflow-y: auto;
+}
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3% !important;
+}
+#nextBtn {
+  margin-left: 3%;
+}
+#createBtn {
+  margin-left: 3%;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 100vw !important;
+    max-height: 90%;
+  }
+  .wraper {
+    width: 100vw !important;
+    padding: 0%;
+  }
+  .btns {
+    justify-content: center;
+    margin-top: 10% !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 65vw;
+  }
+  .wraper {
+    width: 65vw;
+  }
+}

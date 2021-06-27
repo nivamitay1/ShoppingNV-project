@@ -1,0 +1,9 @@
+.productsWrap {
+  max-width: 67vw;
+  margin: auto;
+}
+.productGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

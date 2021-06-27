@@ -1,0 +1,70 @@
+.MainMenu {
+  max-width: 67vw;
+  margin: auto;
+}
+.MainMenu .nav {
+  background-color: #fff;
+  height: 63px;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+.DropDownMenu {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.MainMenu .Level0 {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  width: 5.88% !important;
+  border-left: 1px solid #dcdcdc;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.MainMenu .Level0 .Title {
+  color: #6f6f6f;
+  font-size: 13px;
+  text-align: center;
+  height: 63px;
+  display: table;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #fff;
+  font-weight: normal;
+  width: 100%;
+}
+.MainMenu .Level0 .Title span {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+
+.categoryBtn {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.categoryIcon {
+  margin: auto;
+}
+
+.categoryBtn:hover {
+  color: rgb(108, 161, 27);
+}
+.selected {
+  color: rgb(108, 161, 27) !important;
+}
+@media screen and (max-width: 940px) {
+  .MainMenu {
+    max-width: 100vw;
+  }
+}
+@media screen and (max-width: 530px) {
+  .MainMenu {
+    max-width: 100vw;
+  }
+}

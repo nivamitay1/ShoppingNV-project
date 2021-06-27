@@ -1,0 +1,18 @@
+.loginContainer {
+  margin-top: 3%;
+  color: white;
+  text-align: center;
+}
+.input {
+  background-color: rgba(255, 255, 255, 0.815);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#submit {
+  margin-top: 5%;
+  background-color: white;
+  font-weight: 600;
+}
+#loader {
+  z-index: 1;
+}

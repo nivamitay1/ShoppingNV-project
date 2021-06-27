@@ -1,0 +1,12 @@
+.productCard {
+  width: 200px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.productImg {
+  margin: auto;
+  object-fit: scale-down !important;
+}
+.productName {
+  min-height: 8vh;
+}

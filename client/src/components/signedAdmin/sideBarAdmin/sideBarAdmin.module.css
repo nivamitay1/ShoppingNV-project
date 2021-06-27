@@ -1,0 +1,37 @@
+.logoDiv {
+  margin: auto;
+  /* min-width: 10vw; */
+}
+.logoImg {
+  height: 60px;
+  /* width: 160px;  */
+}
+.imageBtn {
+  text-transform: none;
+}
+.submitBtn {
+  text-transform: none;
+}
+.previewImage {
+  height: 150px;
+  width: 100px;
+  margin: auto;
+}
+.searchList {
+  -webkit-box-shadow: 5px 8px 20px 5px rgba(0, 0, 0, 0.21);
+  position: relative;
+  box-shadow: 5px 8px 20px 5px rgba(0, 0, 0, 0.21);
+  z-index: 99999;
+  background-color: white;
+  max-height: 60%;
+  overflow-y: auto;
+}
+.searchListItem:hover {
+  cursor: pointer;
+  background-color: rgba(167, 167, 167, 0.473);
+}
+@media screen and (max-width: 440px) {
+  .logoDiv {
+    display: none;
+  }
+}
