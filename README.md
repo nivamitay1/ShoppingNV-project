@@ -2,7 +2,7 @@
 
 ## Demo:
 
-View the demo at https://online-shop-niv.herokuapp.com
+View the Live Demo at https://online-shop-niv.herokuapp.com
 
 ## User UI:
 
