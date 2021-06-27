@@ -57,6 +57,8 @@ View the Live Demo at https://online-shop-niv.herokuapp.com
 
 ### Admin:
 
+#### Home Page Admin
+
 ![Home Page Admin](/screenshots/HomePage-client.png "Home Page")
 
 ## Built With:
