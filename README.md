@@ -7,7 +7,7 @@ View the Live Demo at https://online-shop-niv.herokuapp.com
 ## User UI:
 
 - Register & login
-- Filter by category
+- Filter products by category
 - Search products
 - Add products to cart
 - Manage your cart
