@@ -23,7 +23,12 @@ View the Live Demo at https://online-shop-niv.herokuapp.com
 
 ### User:
 
+#### Login
+
 ![Login](/screenshots/Login.png "Login")
+
+#### Sign Up
+
 ![Sign Up](/screenshots/Sign-up.png "Sign Up")
 ![About](/screenshots/About.png "About")
 ![Home Page](/screenshots/HomePage-client.png "Home Page")
