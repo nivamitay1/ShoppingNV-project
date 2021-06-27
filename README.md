@@ -59,6 +59,6 @@ View the demo at https://online-shop-niv.herokuapp.com
 
 **Niv Amitay**
 
-- [Git Profile](https://github.com/nivamitay1 "Niv Amitay")
-- [Email](mailto:nivamitay1@gmail.com)
-- [Linkedin](http://www.linkedin.com/in/niv-amitay-393231206)
+- Git Profile: https://github.com/nivamitay1
+- Email : nivamitay1@gmail.com
+- Linkedin: http://www.linkedin.com/in/niv-amitay-393231206
