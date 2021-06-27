@@ -23,18 +23,36 @@ View the Live Demo at https://online-shop-niv.herokuapp.com
 
 ### User:
 
-### Login
+#### Login
 
 ![Login](/screenshots/Login.png "Login")
 
-### Sign Up
+#### Sign Up
 
 ![Sign Up](/screenshots/Sign-up.png "Sign Up")
+
+#### About
+
 ![About](/screenshots/About.png "About")
+
+#### Home Page
+
 ![Home Page](/screenshots/HomePage-client.png "Home Page")
+
+#### Cart Review
+
 ![Cart Review](/screenshots/Cart-review.png "Cart Review")
+
+#### Checkout
+
 ![Checkout](/screenshots/Checkout.png "Checkout")
+
+#### Order Summary
+
 ![Order Summary](/screenshots/Order-summary.png "Order Summary")
+
+#### Invoice
+
 ![Invoice](/screenshots/Invoice.png "Invoice")
 
 ### Admin:
