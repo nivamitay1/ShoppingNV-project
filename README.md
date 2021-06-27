@@ -57,9 +57,17 @@ View the Live Demo at https://online-shop-niv.herokuapp.com
 
 ### Admin:
 
-#### Home Page Admin
+#### Admin Home Page
 
-![Home Page Admin](/screenshots/HomePage-client.png "Home Page")
+![Home Page Admin](/screenshots/HomePage-admin.png "Home Page Admin")
+
+#### Admin Add Product
+
+![Admin Add Product](/screenshots/Add-product.png "Admin Add Product")
+
+#### Admin Edit Product
+
+![Admin Edit Product](/screenshots/Edit-product.png "Admin Edit Product")
 
 ## Built With:
 
