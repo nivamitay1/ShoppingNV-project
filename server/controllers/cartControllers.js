@@ -2,7 +2,6 @@ const Cart = require("../models/Cart");
 const Cart_item = require("../models/Cart_item");
 const Product = require("../models/Product");
 
-// const User = require("../models/User");
 const sequelize = require("../db/connection");
 
 exports.getOrCreateCart = async (req, res) => {
