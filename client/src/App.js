@@ -8,6 +8,7 @@ function App() {
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("ShoppingNVUser")) !== null) {
       if (JSON.parse(localStorage.getItem("ShoppingNVUser")).admin) {
+        // checking if admin
         setToken("admin");
       } else {
         setToken("ok");

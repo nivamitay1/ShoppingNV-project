@@ -16,7 +16,6 @@ export default function UserInfoForm({ activeStep, setActiveStep, setOpen }) {
   const checkAccountDetails = async (values) => {
     const res = await axios.post(`${domain}/users`, values);
     if (res.data.status === "success") {
-      console.log(res.data);
       dispatch({ type: "FIRST_STEP", user: values });
 
       setActiveStep(activeStep + 1);

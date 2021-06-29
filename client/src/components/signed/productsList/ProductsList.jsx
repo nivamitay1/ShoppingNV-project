@@ -15,7 +15,6 @@ export default function ProductsList({ render }) {
   const currentCategory = useSelector((state) => state.categoryReducer);
   const isSideBar = useSelector((state) => state.sideBarReducer.isOpen);
 
-  const [openLoader, setOpenLoader] = useState(false);
   useEffect(() => {
     let didCancel = false;
 
@@ -32,7 +31,7 @@ export default function ProductsList({ render }) {
     }
     async function getCategoryProducts() {
       dispatch({ type: "OPEN_LOADER" });
-
+      // get products of current category
       const res = await axios.get(`${domain}/products/${currentCategory}`);
 
       if (!didCancel) {
@@ -55,7 +54,7 @@ export default function ProductsList({ render }) {
   }, [render]);
   return (
     <>
-      <LoaderComp openLoader={openLoader} />
+      <LoaderComp />
       <Grid
         container
         direction="row"

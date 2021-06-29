@@ -19,9 +19,8 @@ export default function OrderFrom({ activeStep, setActiveStep }) {
   let history = useHistory();
   const [selectedDate, handleDateChange] = useState(new Date());
 
-  const checkAccountDetails = async (values) => {
+  const handleSubmit = async (values) => {
     values.deliveryDate = selectedDate;
-    console.log(values, selectedDate);
     dispatch({ type: "SET_ORDER", order: values });
     setActiveStep(activeStep + 1);
   };
@@ -94,7 +93,7 @@ export default function OrderFrom({ activeStep, setActiveStep }) {
     validationSchema: validationSchema,
 
     onSubmit: (values) => {
-      checkAccountDetails(values);
+      handleSubmit(values);
     },
   });
 

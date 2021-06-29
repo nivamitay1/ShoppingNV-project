@@ -10,9 +10,9 @@ import Typography from "@material-ui/core/Typography";
 import EditIcon from "@material-ui/icons/Edit";
 
 export default function ProductAdmin({ product }) {
-  console.log(product);
   let dispatch = useDispatch();
   const handleDrawerOpenEditProduct = () => {
+    // open edit product sidebar
     dispatch({ type: "OPEN_EDIT_PRODUCT", product });
   };
   return (

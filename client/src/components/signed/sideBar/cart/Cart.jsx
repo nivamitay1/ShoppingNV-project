@@ -24,7 +24,6 @@ export default function Cart() {
           type: "SET_CART",
           cart: res.data.cart,
         });
-        console.log("blahh");
       }
     };
     getOrCreateCart();

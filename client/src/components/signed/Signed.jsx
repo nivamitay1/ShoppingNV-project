@@ -4,21 +4,11 @@ import Categories from "./categories/Categories";
 import ProductsList from "./productsList/ProductsList";
 import Checkout from "./checkout/Checkout";
 import Order from "./checkout/order/Order";
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from "react-router-dom";
-import { useHistory } from "react-router-dom";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProtectedRoute from "../ProtectedRoute";
 
 export default function Signed({ setToken }) {
-  let history = useHistory();
   const [render, setRender] = useState(0);
   const cartItems = useSelector((state) => state.cartReducer.cart_items);
 
@@ -32,9 +22,7 @@ export default function Signed({ setToken }) {
             cartItems={cartItems}
             component={Checkout}
           />
-          {/* <Route path="/checkout">
-            <Checkout />
-          </Route> */}
+
           <ProtectedRoute
             exact
             path="/order"
@@ -42,9 +30,6 @@ export default function Signed({ setToken }) {
             component={Order}
           />
 
-          {/* <Route path="/order">
-            <Order />
-          </Route> */}
           <Route path="/">
             <div>
               <SideBar setToken={setToken} />

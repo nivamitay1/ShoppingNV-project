@@ -16,11 +16,9 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
       <Link color="inherit" href="www.linkedin.com/in/niv-amitay-393231206">
         My linkedin {<LinkedInIcon />}
       </Link>{" "}
-      {new Date().getFullYear()}
       {"."}
     </Typography>
   );

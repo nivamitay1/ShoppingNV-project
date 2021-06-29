@@ -7,8 +7,9 @@ const Cart_item = require("../models/Cart_item");
 exports.register = async (req, res) => {
   try {
     const data = req.body;
-    console.log(data);
     if (!data.city) {
+      // first sign up step
+
       const user = await User.findOne({
         where: { email: data.email },
       });
@@ -26,6 +27,8 @@ exports.register = async (req, res) => {
       }
       return res.status(200).send({ status: "success", message: "continue" });
     }
+
+    // second sign up step
 
     const hashedPassword = await bcrypt.hash(data.password, 10);
 
@@ -74,6 +77,7 @@ exports.login = async (req, res) => {
 
       if (match && data) {
         if (user.email === "AdminAdmin@gmail.com") {
+          // check if Admin
           return res.status(202).send({ status: "success", user });
         }
         let cartTotalPrice = 0;

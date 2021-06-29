@@ -8,12 +8,13 @@ const sequelize = require("../db/connection");
 exports.getOrCreateCart = async (req, res) => {
   try {
     const user_id = req.params.user_id;
-
+    // checking if the user already have an open cart
     const cart = await Cart.findOne({
       where: { user_id: user_id, status: "open" },
       include: { model: Cart_item, include: Product },
     });
     if (cart) {
+      // if the user has an open cart calculate the cart total price
       let cartTotalPrice = 0;
       cart.cart_items.forEach((cartItem) => {
         cartTotalPrice = cartTotalPrice + Number(cartItem.total_price);
@@ -22,6 +23,7 @@ exports.getOrCreateCart = async (req, res) => {
       return res.status(200).send({ cart, status: "success" });
     } else {
       await sequelize.sync();
+      // if the user doesn't have an open cart, creating a cart.
 
       const newCart = await Cart.create(
         {

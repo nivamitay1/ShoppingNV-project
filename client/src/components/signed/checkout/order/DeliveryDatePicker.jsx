@@ -23,8 +23,6 @@ export default function DeliveryDatePicker({ selectedDate, handleDateChange }) {
   }, []);
 
   function disableUnavailableDates(date) {
-    console.log(selectedDays.includes(date.toDateString()));
-    console.log(selectedDays, date.toDateString());
     return selectedDays.includes(date.toDateString());
   }
   return (

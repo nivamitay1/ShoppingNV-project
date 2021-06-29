@@ -24,10 +24,10 @@ export default function LoginForm({ setToken, message, setMessage, setOpen }) {
     setOpen(true);
     const res = await axios.post(`${domain}/users/login`, values);
     setMessage(res.data.message);
-    console.log(res.data);
 
     if (res.data.status === "success") {
       if (res.data.user.email === "AdminAdmin@gmail.com") {
+        // checking if admin
         res.data.user.admin = true;
 
         localStorage.setItem("ShoppingNVUser", JSON.stringify(res.data.user));

@@ -1,13 +1,10 @@
 export const userReducer = (state = {}, action) => {
   switch (action.type) {
     case "FIRST_STEP":
-      console.log(state, action.user);
-
       return (state = action.user);
     case "SECOND_STEP":
       state.city = action.user.city;
       state.street = action.user.street;
-      console.log(state);
       return state;
     default:
       return state;
@@ -15,20 +12,26 @@ export const userReducer = (state = {}, action) => {
 };
 
 export const sideBarReducer = (
-  state = { isOpen: true, addOrEdit: "add" },
+  state = { isOpen: true, addOrEdit: "add", product: {} },
   action
 ) => {
   switch (action.type) {
     case "OPEN_ADD_PRODUCT":
       return (state = { isOpen: true, addOrEdit: "add" });
+
     case "OPEN_EDIT_PRODUCT":
       return (state = {
         isOpen: true,
         addOrEdit: "edit",
         product: action.product,
       });
+
+    case "INITIALIZE_SIDEBAR":
+      return (state = { isOpen: true, addOrEdit: "add", product: {} });
+
     case "OPEN":
       return (state = { isOpen: true });
+
     case "CLOSE":
       return (state = { isOpen: false, addOrEdit: "add" });
 
@@ -40,7 +43,6 @@ export const sideBarReducer = (
 export const categoryReducer = (state = null, action) => {
   switch (action.type) {
     case "CHANGE_CATEGORY":
-      console.log(state, action.currentCategory);
       return (state = action.currentCategory);
 
     default:
@@ -55,6 +57,7 @@ export const productsListReducer = (state = [], action) => {
 
     case "ADMIN_ADD_PRODUCT":
       if (
+        // adding product only if his catgory = currentCategory or currentCategory = null
         action.newProduct.category_id === action.currentCategory ||
         action.currentCategory === null
       ) {
@@ -63,12 +66,10 @@ export const productsListReducer = (state = [], action) => {
       return state;
 
     case "ADMIN_UPDATE_PRODUCT":
-      console.log(action.product_id, action.updatedProduct);
       state.forEach((product, index) => {
         if (product.id === action.product_id) {
           state[index] = action.updatedProduct;
         }
-        console.log(state);
       });
       return (state = [...state]);
 
@@ -133,12 +134,10 @@ export const cartReducer = (state = { cart_items: [] }, action) => {
         cart_items: [...state.cart_items],
       };
     case "UPDATE_ITEM_FROM_CART":
-      console.log(action.product_id, action.updatedProduct);
       state.forEach((product, index) => {
         if (product.id === action.product_id) {
           state[index] = action.updatedProduct;
         }
-        console.log(state);
       });
       return (state = [...state]);
 

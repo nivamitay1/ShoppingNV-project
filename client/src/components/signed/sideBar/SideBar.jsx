@@ -135,6 +135,7 @@ export default function SideBar({ setToken }) {
 
   const logout = () => {
     setToken();
+    dispatch({ type: "INITIALIZE_SIDEBAR" });
     localStorage.setItem("ShoppingNVUser", null);
   };
 

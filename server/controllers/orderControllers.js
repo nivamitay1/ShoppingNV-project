@@ -17,7 +17,7 @@ exports.createOrder = async (req, res) => {
       cart_id: data.cart_id,
     });
     const cart = Cart.build({ id: data.cart_id }, { isNewRecord: false }); // Create an instance of the cart
-    cart.update({ status: "closed" });
+    cart.update({ status: "closed" }); // closing the cart
     res.status(200).send({ status: "success" });
   } catch (error) {
     console.log(error);
@@ -28,9 +28,11 @@ exports.getDeliveryDates = async (req, res) => {
   try {
     const unavailableDates = [];
     const deliveryDates = await Order.findAll({
+      // get all the delivery dates
       attributes: ["delivery_date"],
     });
     for (let index = 0; index < deliveryDates.length; index++) {
+      // counting how many times each delivery date appears
       const element = deliveryDates[index];
       element.counter = 0;
       deliveryDates.forEach((date) => {

@@ -20,7 +20,6 @@ export default function ProductsListAdmin({ render }) {
     async function getAllProducts() {
       dispatch({ type: "OPEN_LOADER" });
 
-      console.log("All" + " " + currentCategory);
       const res = await axios.get(`${domain}/products`);
 
       if (!didCancel) {
@@ -32,9 +31,8 @@ export default function ProductsListAdmin({ render }) {
       dispatch({ type: "CLOSE_LOADER" });
     }
     async function getCategoryProducts() {
-      console.log("Category" + " " + currentCategory);
       dispatch({ type: "OPEN_LOADER" });
-
+      // get products of current category
       const res = await axios.get(`${domain}/products/${currentCategory}`);
 
       if (!didCancel) {
